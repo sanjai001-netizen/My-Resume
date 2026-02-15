@@ -1,0 +1,469 @@
+/* Global Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --text-color: #333;
+    --bg-color: #f4f7f6;
+    --white: #ffffff;
+    --sidebar-bg: #8c8c8c2b;
+    /* Very light gray for subtle separation */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* Download Button */
+.download-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.download-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Resume Container */
+.resume-container {
+    background-color: var(--white);
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.resume-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 40px;
+    text-align: center;
+}
+
+.resume-header h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.resume-header .role {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-info a {
+    color: var(--white);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Resume Body */
+.resume-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Left Column */
+.left-column {
+    width: 35%;
+    background-color: var(--sidebar-bg);
+    padding: 30px;
+    border-right: 1px solid #eee;
+}
+
+/* Right Column */
+.right-column {
+    width: 65%;
+    padding: 30px;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 20px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section h2 i {
+    font-size: 18px;
+    color: var(--accent-color);
+}
+
+/* Skills */
+.skill-category {
+    margin-bottom: 15px;
+}
+
+.skill-category h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+.skill-category p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Job & Project Items */
+.job,
+.project,
+.edu-item {
+    margin-bottom: 20px;
+}
+
+.job:last-child,
+.project:last-child {
+    margin-bottom: 0;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.job-header h3 {
+    font-size: 18px;
+    color: var(--secondary-color);
+}
+
+.job-header .company {
+    font-weight: 500;
+    color: #555;
+    margin-right: auto;
+    padding-left: 10px;
+}
+
+.job-header .date {
+    font-size: 14px;
+    color: #777;
+    font-style: italic;
+}
+
+.job ul,
+.project ul,
+.cert-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.job ul li,
+.project ul li,
+.cert-list li {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.project h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.project .tech-stack {
+    font-size: 13px;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+
+
+/* Education */
+.edu-item h3 {
+    font-size: 16px;
+    color: var(--secondary-color);
+    margin-bottom: 2px;
+}
+
+.edu-item .institution {
+    font-weight: 500;
+    color: #555;
+    font-size: 14px;
+}
+
+.edu-item .year,
+.edu-item .status {
+    font-size: 13px;
+    color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume-body {
+        flex-direction: column;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        border-right: none;
+    }
+
+    .left-column {
+        border-bottom: 1px solid #eee;
+    }
+}
+
+/* Print Styles */
+@media print {
+    @page {
+        size: A4;
+        margin: 0.8cm;
+        /* Increased margin slightly */
+    }
+
+    body {
+        background-color: white;
+        padding: 0;
+        margin: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        font-size: 13px;
+        /* Increased from 11px */
+        line-height: 1.5;
+        /* Increased line height */
+    }
+
+    /* Hide non-print elements */
+    .download-btn {
+        display: none !important;
+    }
+
+    /* Container adjustments */
+    .resume-container {
+        box-shadow: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        /* Ensure it takes full height */
+    }
+
+    /* Header Compactness */
+    .resume-header {
+        padding: 25px;
+        /* Increased from 15px */
+    }
+
+    .resume-header h1 {
+        font-size: 32px;
+        /* Increased from 24px */
+        margin-bottom: 5px;
+    }
+
+    .resume-header .role {
+        font-size: 16px;
+        margin-bottom: 15px;
+        /* Increased space */
+    }
+
+    .contact-info {
+        gap: 20px;
+        margin-bottom: 5px;
+        font-size: 13px;
+        /* Increased */
+    }
+
+    .contact-info span,
+    .social-links a {
+        color: var(--white) !important;
+        font-size: 13px;
+        /* Increased */
+    }
+
+    .social-links {
+        gap: 20px;
+    }
+
+    /* Body Layout */
+    .resume-body {
+        display: flex;
+        flex-direction: row;
+        min-height: 90vh;
+        /* Attempt to fill page */
+    }
+
+    .left-column {
+        width: 32%;
+        background-color: #f5f5f5 !important;
+        padding: 20px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .right-column {
+        width: 68%;
+        padding: 20px;
+        /* Increased padding */
+    }
+
+    /* Sections */
+    .section {
+        margin-bottom: 20px;
+        /* Increased spacing */
+        break-inside: avoid;
+    }
+
+    .section h2 {
+        font-size: 18px;
+        /* Increased */
+        margin-bottom: 12px;
+        padding-bottom: 5px;
+        border-bottom-width: 2px;
+    }
+
+    .section h2 i {
+        font-size: 16px;
+    }
+
+    /* Items */
+    .job,
+    .project,
+    .edu-item,
+    .skill-category {
+        margin-bottom: 15px;
+        /* Increased spacing */
+    }
+
+    .job-header {
+        margin-bottom: 4px;
+    }
+
+    .job-header h3,
+    .project h3,
+    .edu-item h3,
+    .skill-category h3 {
+        font-size: 15px;
+        /* Increased */
+        margin-bottom: 2px;
+    }
+
+    .job-header .company,
+    .job-header .date,
+    .edu-item .institution,
+    .edu-item .year {
+        font-size: 12px;
+        /* Increased */
+    }
+
+    .job ul,
+    .project ul,
+    .cert-list {
+        margin-top: 3px;
+        margin-left: 18px;
+        margin-bottom: 5px;
+    }
+
+    .job ul li,
+    .project ul li,
+    .cert-list li {
+        font-size: 12px;
+        /* Increased */
+        margin-bottom: 3px;
+        line-height: 1.4;
+    }
+
+    p {
+        font-size: 12px;
+        /* Increased */
+        margin-bottom: 5px;
+    }
+
+    .project .tech-stack {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+
+
+
+    /* Links */
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}
